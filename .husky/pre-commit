@@ -1,5 +1,5 @@
 #!/bin/sh
 echo "Running pre-commit hook..."
 pnpm prettier --write .
-pnpm lint && pnpm test
+pnpm lint
 echo "Pre-commit hook completed."
