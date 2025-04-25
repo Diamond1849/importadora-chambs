@@ -1,6 +1,5 @@
 import Image from 'next/image';
-import componentCard from '../components/DetailCard';
-import { FaGem, FaShieldAlt, FaClock } from 'react-icons/fa';
+import { FaGem } from 'react-icons/fa';
 import DetailCard from '@src/components/DetailCard';
 
 export default function Home() {
