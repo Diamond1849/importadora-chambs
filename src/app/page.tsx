@@ -1,4 +1,7 @@
 import Image from 'next/image';
+import componentCard from '../components/DetailCard';
+import { FaGem, FaShieldAlt, FaClock } from 'react-icons/fa';
+import DetailCard from '@src/components/DetailCard';
 
 export default function Home() {
   return (
@@ -11,6 +14,11 @@ export default function Home() {
           width={180}
           height={38}
           priority
+        />
+        <DetailCard
+          icono={<FaGem className="text-red-500 text-3xl" />}
+          titulo="Calidad Premium"
+          descripcion="Importamos solo repuestos originales y de alta calidad de fabricantes certificados."
         />
         <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
           <li className="mb-2 tracking-[-.01em]">
