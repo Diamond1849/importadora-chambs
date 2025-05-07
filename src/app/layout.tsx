@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import HeaderChambs from '@src/components/HeaderChambs';
 
 export const metadata: Metadata = {
   title: 'Importadora Chambs',
@@ -12,6 +13,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
+      <div className="h-20" />
+      <HeaderChambs />
       <body>
         {children}
       </body>
