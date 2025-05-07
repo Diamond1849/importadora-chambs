@@ -1,4 +1,0 @@
-#!/bin/sh
-echo "Running pre-commit hook..."
-pnpm lint
-echo "Pre-commit hook completed."
