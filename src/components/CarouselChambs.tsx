@@ -78,7 +78,7 @@ const CarouselChambs = () => {
   }, [itemsToShow, currentIndex]);
 
   return (
-    <div className="relative w-full overflow-hidden py-8 md:py-12 bg-gray-100">
+    <div className="relative w-full overflow-hidden">
       <div className="container mx-auto px-4">
         <h2 className="text-xl md:text-2xl font-bold text-center mb-6 md:mb-8 text-gray-800">Nuestras Marcas</h2>
         

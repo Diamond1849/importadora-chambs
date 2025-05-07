@@ -5,11 +5,7 @@ import { cn } from '../../lib/utils';
 import { Icon } from '@iconify/react/dist/iconify.js';
 import { useRouter } from 'next/navigation';
 
-const HeaderChambs = ({
-  id = '',
-}: {
-  id?: '' | 'marcas' | 'servicios' | 'nosotros' | 'contacto';
-}) => {
+const HeaderChambs = ({ id = '' }: { id?: '' | 'nosotros' | 'contacto' }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [activeLink, setActiveLink] = useState(id);
   const router = useRouter();
@@ -19,14 +15,12 @@ const HeaderChambs = ({
   };
 
   const handleLinkClick = (id: string) => {
-    setActiveLink(id as '' | 'marcas' | 'servicios' | 'nosotros' | 'contacto');
+    setActiveLink(id as '' | 'nosotros' | 'contacto');
     router.push(`/${id}`);
   };
 
   const navLinks = [
     { name: 'Inicio', id: '' },
-    { name: 'Marcas', id: 'Marcas' },
-    { name: 'Servicios', id: 'Servicios' },
     { name: 'Nosotros', id: 'Nosotros' },
     { name: 'Contacto', id: 'Contacto' },
   ];
