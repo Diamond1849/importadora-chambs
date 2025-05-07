@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import { cn } from "../../lib/utils";
 
 
 const brands = [
@@ -107,23 +106,6 @@ const CarouselChambs = () => {
               ))}
             </div>
           </div>
-        </div>
-        
-        {/* Indicator Dots */}
-        <div className="flex justify-center mt-4 md:mt-6 space-x-1 md:space-x-2">
-          {Array.from({ length: brands.length - itemsToShow + 1 }).map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              className={cn(
-                "w-1.5 md:w-2 h-1.5 md:h-2 rounded-full transition-all duration-200",
-                currentIndex === index
-                  ? "bg-gray-800 w-4 md:w-6"
-                  : "bg-gray-400 hover:bg-gray-600"
-              )}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
         </div>
       </div>
     </div>
