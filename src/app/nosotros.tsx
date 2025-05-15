@@ -1,13 +1,11 @@
 import MissionVision from '../components/about/MissionVision'
 import MeetTheTeam from '../components/about/MeetTheTeam'
 
-export default function Home() {
-  return (
-    <main>
-      <div>
+export default function NosotrosPage() {
+    return (
+        <main>
         <MissionVision />
         <MeetTheTeam />
-        </div>
         </main>
-  );
+    )
 }
