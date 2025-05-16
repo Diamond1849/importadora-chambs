@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import React from "react";
 import { Icon } from "@iconify/react";
 import { useForm } from "react-hook-form";
@@ -10,9 +10,7 @@ interface FormData {
 interface ContactFormProps {
   onSubmit?: (data: FormData) => void;
 }
-const ContactForm: React.FC<ContactFormProps> = ({
-  onSubmit,
-}) => {
+const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
   const {
     register,
     handleSubmit,
@@ -26,97 +24,180 @@ const ContactForm: React.FC<ContactFormProps> = ({
     reset();
   };
   return (
-    <div className="w-full max-w-4xl mx-auto bg-white rounded-lg shadow-lg flex flex-col md:flex-row overflow-hidden border-2 border-black">
-      {/* Info de contacto */}
-      <div className="bg-red-900 text-white p-8 md:w-1/2 flex flex-col justify-center">
-        <h2 className="text-2xl font-bold mb-4">Contáctanos</h2>
-        <p className="mb-6">Déjanos tu mensaje y te responderemos lo antes posible.</p>
-        <div className="space-y-4">
-          <div className="flex items-center gap-3">
-            <Icon icon="mdi:map-marker" className="text-2xl" />
-            <span>Huachi Chico, José Villamil S/N y Av. Los Atis, Ambato, Ecuador</span>
+    <div className="min-h-screen grid place-items-center">
+      {/* Main Content */}
+      <div className="container mx-auto px-4 py-12">
+        <div className="flex flex-col md:flex-row gap-12 items-start">
+          {/* Contact Form */}
+          <div className="p-8 rounded-lg w-3/4">
+            <h2 className="text-2xl font-bold mb-8 text-red-900">
+              Envíanos un Mensaje
+            </h2>
+            <form
+              onSubmit={handleSubmit(handleFormSubmit)}
+              noValidate
+              className="space-y-6"
+            >
+              <div>
+                <label
+                  className="block mb-2 font-medium"
+                  htmlFor="name"
+                >
+                  Nombre Completo
+                </label>
+                <input
+                  id="name"
+                  type="text"
+                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 ${
+                    errors.name
+                      ? "border-red-500 focus:ring-red-200"
+                      : "border-gray-300 focus:ring-red-200"
+                  }`}
+                  {...register("name", {
+                    required: "El nombre es obligatorio",
+                  })}
+                />
+                {errors.name && (
+                  <span className="text-red-500 text-sm mt-1 block">
+                    {errors.name.message}
+                  </span>
+                )}
+              </div>
+              <div>
+                <label
+                  className="block mb-2 font-medium"
+                  htmlFor="email"
+                >
+                  Correo Electrónico
+                </label>
+                <input
+                  id="email"
+                  type="email"
+                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 ${
+                    errors.email
+                      ? "border-red-500 focus:ring-red-200"
+                      : "border-gray-300 focus:ring-red-200"
+                  }`}
+                  {...register("email", {
+                    required: "El email es obligatorio",
+                    pattern: {
+                      value: /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/,
+                      message: "Email inválido",
+                    },
+                  })}
+                />
+                {errors.email && (
+                  <span className="text-red-500 text-sm mt-1 block">
+                    {errors.email.message}
+                  </span>
+                )}
+              </div>
+              <div>
+                <label
+                  className="block mb-2 font-medium"
+                  htmlFor="message"
+                >
+                  Mensaje
+                </label>
+                <textarea
+                  id="message"
+                  rows={6}
+                  className={`w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 ${
+                    errors.message
+                      ? "border-red-500 focus:ring-red-200"
+                      : "border-gray-300 focus:ring-red-200"
+                  }`}
+                  {...register("message", {
+                    required: "El mensaje es obligatorio",
+                  })}
+                />
+                {errors.message && (
+                  <span className="text-red-500 text-sm mt-1 block">
+                    {errors.message.message}
+                  </span>
+                )}
+              </div>
+              <button
+                type="submit"
+                className="w-full bg-red-900 text-white py-3 px-6 rounded-lg hover:bg-red-800 transition-colors font-semibold disabled:opacity-60"
+                disabled={isSubmitting}
+              >
+                {isSubmitting
+                  ? "Enviando..."
+                  : "Enviar mensaje"}
+              </button>
+              {isSubmitSuccessful && (
+                <div className="bg-green-50 text-green-800 p-4 rounded-lg mt-4">
+                  ¡Mensaje enviado con éxito! Nos pondremos en
+                  contacto contigo pronto.
+                </div>
+              )}
+            </form>
           </div>
-          <div className="flex items-center gap-3">
-            <Icon icon="mdi:phone" className="text-2xl" />
-            <span>+593 99 380 3064</span>
-          </div>
-          <div className="flex items-center gap-3">
-            <Icon icon="mdi:email" className="text-2xl" />
-            <span>facturacion1importadorachambs@gmail.com</span>
+          {/* Contact Information */}
+          <div className="bg-white p-8 rounded-lg">
+            <h2 className="text-2xl font-bold mb-8 text-red-900">
+              Información de Contacto
+            </h2>
+            <div className="space-y-6">
+              <div className="flex items-start gap-4">
+                <Icon
+                  icon="mdi:map-marker"
+                  className="text-3xl text-red-900 mt-1"
+                />
+                <div>
+                  <h3 className="font-semibold mb-1">
+                    Dirección
+                  </h3>
+                  <p className="text-gray-600">
+                    Huachi Chico, José Villamil S/N y Av.
+                    Los Atis, Ambato, Ecuador
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <Icon
+                  icon="mdi:phone"
+                  className="text-3xl text-red-900 mt-1"
+                />
+                <div>
+                  <h3 className="font-semibold mb-1">
+                    Teléfono
+                  </h3>
+                  <p className="text-gray-600">
+                    +593 99 380 3064
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <Icon
+                  icon="mdi:email"
+                  className="text-3xl text-red-900 mt-1"
+                />
+                <div>
+                  <h3 className="font-semibold mb-1">
+                    Email
+                  </h3>
+                  <p className="text-gray-600">
+                    info@importadorachambs.com
+                  </p>
+                </div>
+              </div>
+            </div>
+            {/* Horario o información adicional */}
+            <div className="mt-8 p-6 bg-red-50 rounded-lg">
+              <h3 className="font-semibold text-red-900 mb-2">
+                Horario de Atención
+              </h3>
+              <p className="text-gray-600">
+                Lunes a Viernes: 9:00 AM - 6:00 PM
+                <br />
+                Sábados: 9:00 AM - 1:00 PM
+              </p>
+            </div>
           </div>
         </div>
       </div>
-      {/* Formulario */}
-      <form
-        className="p-8 md:w-1/2 bg-white flex flex-col justify-center"
-        onSubmit={handleSubmit(handleFormSubmit)}
-        noValidate
-      >
-        <div className="mb-4">
-          <label className="block mb-1 font-medium" htmlFor="name">
-            Nombre
-          </label>
-          <input
-            id="name"
-            type="text"
-            className={`w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 ${
-              errors.name ? "border-red-500 focus:ring-red-200" : "focus:ring-red-200"
-            }`}
-            {...register("name", { required: "El nombre es obligatorio" })}
-          />
-          {errors.name && (
-            <span className="text-red-500 text-sm">{errors.name.message}</span>
-          )}
-        </div>
-        <div className="mb-4">
-          <label className="block mb-1 font-medium" htmlFor="email">
-            Email
-          </label>
-          <input
-            id="email"
-            type="email"
-            className={`w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 ${
-              errors.email ? "border-red-500 focus:ring-red-200" : "focus:ring-red-200"
-            }`}
-            {...register("email", {
-              required: "El email es obligatorio",
-              pattern: {
-                value: /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/,
-                message: "Email inválido",
-              },
-            })}
-          />
-          {errors.email && (
-            <span className="text-red-500 text-sm">{errors.email.message}</span>
-          )}
-        </div>
-        <div className="mb-4">
-          <label className="block mb-1 font-medium" htmlFor="message">
-            Mensaje
-          </label>
-          <textarea
-            id="message"
-            rows={4}
-            className={`w-full px-4 py-2 border rounded focus:outline-none focus:ring-2 ${
-              errors.message ? "border-red-500 focus:ring-red-200" : "focus:ring-red-200"
-            }`}
-            {...register("message", { required: "El mensaje es obligatorio" })}
-          />
-          {errors.message && (
-            <span className="text-red-500 text-sm">{errors.message.message}</span>
-          )}
-        </div>
-        <button
-          type="submit"
-          className="bg-red-700 border border-red-900 text-white py-2 px-6 rounded hover:bg-red-800 transition-colors font-semibold disabled:opacity-60"
-          disabled={isSubmitting}
-        >
-          Enviar mensaje
-        </button>
-        {isSubmitSuccessful && (
-          <p className="text-green-600 mt-4">¡Mensaje enviado!</p>
-        )}
-      </form>
     </div>
   );
 };
