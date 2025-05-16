@@ -1,24 +1,21 @@
+'use client'
+
 import Image from 'next/image'
 
-interface Props {
-    name: string
-    image: string
-    position: string
-}
-
-export default function TeamCard({ name, image, position }: Props) {
+export default function TeamCard({ name, image, position }: { name: string; image: string; position: string }) {
     return (
-        <div className="bg-white shadow-md rounded-xl p-4 text-center transform transition-transform duration-300 hover:scale-105 active:scale-105">
-
-        <Image
+        <div className="flex flex-col items-center text-center p-4 bg-white rounded-xl shadow-md transition-transform duration-300 hover:scale-105">
+        <div className="w-32 h-32 rounded-full overflow-hidden mb-4">
+            <Image
             src={image}
             alt={name}
-            width={120}
-            height={120}
-            className="mx-auto rounded-full object-cover"
-        />
-        <h4 className="mt-4 text-lg font-semibold text-blue-900">{name}</h4>
-        <p className="text-gray-600 text-sm">{position}</p>
+            width={128}
+            height={128}
+            className="object-cover w-full h-full"
+            />
+        </div>
+        <h3 className="text-lg font-semibold text-blue-800">{name}</h3>
+        <p className="text-sm text-gray-600">{position}</p>
         </div>
     )
 }

@@ -4,11 +4,15 @@ import TeamCard from './TeamCard'
 
 export default function MeetTheTeam() {
     const team = [
-        { name: 'John Doe', image: '/john.png', position: 'Operations Manager' },
-        { name: 'Jane Smith', image: '/jane.png', position: 'Marketing Lead' },
-        { name: 'Mike Brown', image: '/mike.png', position: 'Tech Specialist' },
-        { name: 'Justhin Charles', image: '/justhin.jpg', position: 'Manager' },
-        { name: 'Emily Maso', image: '/emily.jpg', position: 'Marketing' }
+        { name: 'Eddisson Chamba', image: '/meet_the_team/edisson.jpg', position: 'Gerente General' },
+        { name: 'Carolina Borja', image: '/meet_the_team/carolina.jpg', position: 'Contabilidad' },
+        { name: 'Victoria Rubio', image: '/meet_the_team/victoria.jpg', position: 'Atención al cliente' },
+        { name: 'Rosman Jiménez', image: '/meet_the_team/rosman.jpg', position: 'Bodega' },
+        { name: 'Kevin Chamba', image: '/meet_the_team/kevin.jpg', position: 'Auxiliar de Bodega' },
+        { name: 'Franklin Eugenio', image: '/meet_the_team/franklin.jpg', position: 'Ventas' },
+        { name: 'Christopher Calle', image: '/meet_the_team/christopher.jpg', position: 'Ventas' },
+        { name: 'Kevin Arcos', image: '/meet_the_team/arcos.jpg', position: 'Ventas' },
+        { name: 'Alex Alarcon', image: '/meet_the_team/alex.jpg', position: 'Ventas' }
     ]
 
     return (

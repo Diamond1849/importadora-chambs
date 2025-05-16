@@ -4,7 +4,7 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <section className="text-white flex items-center px-6 md:px-20 bg-cover bg-center bg-no-repeat bg-[#111] md:bg-[url('/hero-car.jpg')] aspect-video">
+    <section className="text-white flex items-center px-6 md:px-20 bg-cover bg-center bg-no-repeat bg-[#111] md:bg-[url('/hero-car.jpg')] h-[500px] max-h-[800px] w-full">
       <div className="max-w-xl space-y-6 bg-black/60 p-6 rounded-md md:bg-transparent">
         <h1 className="text-3xl md:text-5xl font-bold leading-tight">
           Repuestos de Calidad para tu Vehículo
