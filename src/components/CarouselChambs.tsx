@@ -6,27 +6,27 @@ import { useState, useEffect, useCallback } from "react";
 const brands = [
   {
     name: "Bosch",
-    logo: "/api/placeholder/200/100" // Replace with actual Bosch logo
+    logo: "/images/chambs-logo.png" // Replace with actual Bosch logo
   },
   {
     name: "NGK",
-    logo: "/api/placeholder/200/100" // Replace with actual NGK logo
+    logo: "/images/chambs-logo.png" // Replace with actual NGK logo
   },
   {
     name: "Denso",
-    logo: "/api/placeholder/200/100" // Replace with actual Denso logo
+    logo: "/images/chambs-logo.png" // Replace with actual Denso logo
   },
   {
     name: "Continental",
-    logo: "/api/placeholder/200/100" // Replace with actual Continental logo
+    logo: "/images/chambs-logo.png" // Replace with actual Continental logo
   },
   {
     name: "Valvoline",
-    logo: "/api/placeholder/200/100" // Replace with actual Valvoline logo
+    logo: "/images/chambs-logo.png" // Replace with actual Valvoline logo
   },
   {
     name: "Honda",
-    logo: "/api/placeholder/200/100" // Replace with actual Honda logo
+    logo: "/images/chambs-logo.png" // Replace with actual Honda logo
   }
 ];
 
@@ -79,7 +79,7 @@ const CarouselChambs = () => {
 
   return (
     <div className="relative w-full overflow-hidden py-8 md:py-12 bg-gray-100">
-      <div className="container mx-auto px-4">
+      <div >
         <h2 className="text-xl md:text-2xl font-bold text-center mb-6 md:mb-8 text-gray-800">Nuestras Marcas</h2>
         
         <div className="relative">
