@@ -15,61 +15,61 @@ const FooterChambs = () => {
               misión es ofrecer las mejores piezas para todas las marcas de vehículos.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-white hover:text-red-500 transition-colors duration-200">
+              <a href="https://www.facebook.com/share/16g72jiz2M/?mibextid=wwXIfr" className="text-white hover:text-red-500 transition-colors duration-200">
                 <Icon icon={'lucide:facebook'} />
               </a>
-              <a href="#" className="text-white hover:text-red-500 transition-colors duration-200">
+              <a href="https://www.facebook.com/share/16g72jiz2M/?mibextid=wwXIfr" className="text-white hover:text-red-500 transition-colors duration-200">
                 <Icon icon={'lucide:instagram'} />
               </a>
-              <a href="#" className="text-white hover:text-red-500 transition-colors duration-200">
+              <a href="https://www.facebook.com/share/16g72jiz2M/?mibextid=wwXIfr" className="text-white hover:text-red-500 transition-colors duration-200">
                 <Icon icon={'lucide:twitter'} />
               </a>
             </div>
           </div>
 
-          {/* Quick Links */}
+          {/* Quick Links - Actualizados para coincidir con el header */}
           <div>
             <h3 className="text-xl font-bold mb-4">Enlaces rápidos</h3>
             <ul className="space-y-2">
               <li>
-                <a
-                  href="#inicio"
+                <Link
+                  href="/"
                   className="text-gray-300 hover:text-red-500 transition-colors duration-200"
                 >
                   Inicio
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#marcas"
+                <Link
+                  href="/Marcas"
                   className="text-gray-300 hover:text-red-500 transition-colors duration-200"
                 >
                   Marcas
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#servicios"
+                <Link
+                  href="/Servicios"
                   className="text-gray-300 hover:text-red-500 transition-colors duration-200"
                 >
                   Servicios
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#nosotros"
+                <Link
+                  href="/Nosotros"
                   className="text-gray-300 hover:text-red-500 transition-colors duration-200"
                 >
                   Nosotros
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#contacto"
+                <Link
+                  href="/Contacto"
                   className="text-gray-300 hover:text-red-500 transition-colors duration-200"
                 >
                   Contacto
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -79,7 +79,7 @@ const FooterChambs = () => {
             <h3 className="text-xl font-bold mb-4">Contáctenos</h3>
             <ul className="space-y-3">
               <li className="flex items-start space-x-3">
-                <Icon icon={'lucide:mapin'} />
+                <Icon icon={'lucide:map-pin'} />
                 <span className="text-gray-300">Av. Principal #123, Ciudad Principal</span>
               </li>
               <li className="flex items-center space-x-3">

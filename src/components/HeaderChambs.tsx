@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { cn } from '../../lib/utils';
 import { Icon } from '@iconify/react/dist/iconify.js';
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
 const HeaderChambs = ({ id = '' }: { id?: '' | 'nosotros' | 'contacto' }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,23 +29,27 @@ const HeaderChambs = ({ id = '' }: { id?: '' | 'nosotros' | 'contacto' }) => {
   return (
     <header
       className={cn(
+        // MEJORA 1: Aumentar la altura del header de h-20 a h-24
         'fixed top-0 w-full z-50 transition-all duration-300 ease-in-out border-b bg-black/95 text-white shadow-lg border-red-700',
       )}
     >
-      <div className="container mx-auto px-6 flex justify-between items-center h-20">
-        {/* Logo */}
+      {/* MEJORA 2: Aumentar el padding vertical y cambiar la disposición de los elementos */}
+      <div className="container mx-auto px-6 flex justify-between items-center h-24">
+        {/* Logo - Mantener a la izquierda */}
         <div className="flex-shrink-0">
-          <div className="w-48">
-            <img
-              src="https://i.ibb.co/67yQrC9j/Imagen-de-Whats-App-2025-04-02-a-las-08-55-38-ccc392c3.png"
+          <div className="w-48 relative h-14">
+            <Image
+              src="/chambs-logo.png"
               alt="Chambs Logo"
-              className="h-12 object-contain"
+              fill
+              className="object-contain"
+              priority
             />
           </div>
         </div>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-1">
+        {/* MEJORA 4: Centrar los enlaces de navegación usando flex-1 y justify-center */}
+        <nav className="hidden md:flex flex-1 items-center justify-center space-x-6">
           {navLinks.map((link) => (
             <a
               key={link.id}
@@ -87,12 +92,14 @@ const HeaderChambs = ({ id = '' }: { id?: '' | 'nosotros' | 'contacto' }) => {
         )}
       >
         <div className="flex flex-col items-center justify-center h-full space-y-6 p-4">
-          <div className="mb-8">
+          <div className="mb-8 relative w-48 h-14">
             {/* Mobile logo */}
-            <img
-              src="https://i.ibb.co/67yQrC9j/Imagen-de-Whats-App-2025-04-02-a-las-08-55-38-ccc392c3.png"
+            <Image
+              src="/images/chambs-logo.png"
               alt="Chambs Logo"
-              className="h-12 object-contain"
+              fill
+              className="object-contain"
+              priority
             />
           </div>
 
@@ -115,8 +122,6 @@ const HeaderChambs = ({ id = '' }: { id?: '' | 'nosotros' | 'contacto' }) => {
               />
             </a>
           ))}
-
-          {/* Se ha eliminado el botón de cotizar */}
         </div>
 
         {/* Close button at top-right */}
