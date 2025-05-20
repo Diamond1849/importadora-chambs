@@ -4,11 +4,11 @@ import TeamCard from './TeamCard'
 
 export default function MeetTheTeam() {
     const team = [
-        { name: 'John Doe', image: '/john.png', position: 'Operations Manager' },
-        { name: 'Jane Smith', image: '/jane.png', position: 'Marketing Lead' },
-        { name: 'Mike Brown', image: '/mike.png', position: 'Tech Specialist' },
-        { name: 'Justhin Charles', image: '/justhin.jpg', position: 'Manager' },
-        { name: 'Emily Maso', image: '/emily.jpg', position: 'Marketing' }
+        { name: 'Edisson Chamba', image: '/meet_the_team/edisson.png', position: 'Gerente General' },
+        { name: 'Carolina Borja', image: '/meet_the_team/carolina.png', position: 'Contabilidad' },
+        { name: 'Victoria Rubio', image: '/meet_the_team/victoria.jpg', position: 'Atención al cliente' },
+        { name: 'Rosman Jiménez', image: '/meet_the_team/rosman.png', position: 'Bodega' },
+        { name: 'Franklin Eugenio', image: '/meet_the_team/franklin.png', position: 'Ventas' }
     ]
 
     return (
