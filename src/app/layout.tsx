@@ -14,10 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <div className="flex flex-col justify-between h-screen gap-10">
+      <div className="flex flex-col justify-between h-screen">
         <div className="h-20" />
         <HeaderChambs />
-        <body>{children}</body>
+        <body className="mt-24">{children}</body>
         <FooterChambs />
       </div>
     </html>

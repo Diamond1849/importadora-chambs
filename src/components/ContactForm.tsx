@@ -24,7 +24,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
     reset();
   };
   return (
-    <div className="min-h-screen grid place-items-center">
+    <div className="grid place-items-center">
       {/* Main Content */}
       <div className="container mx-auto px-4 py-12">
         <div className="flex flex-col md:flex-row gap-12 items-start">

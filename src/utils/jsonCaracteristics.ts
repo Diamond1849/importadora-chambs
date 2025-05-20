@@ -17,16 +17,16 @@ export const jsonCaracteristics = [
     descripcion:
       'Mantenemos una estructura organizacional clara que facilita la toma de decisiones y la coordinación efectiva.',
   },
-  // {
-  //   icono: "mdi:account-supervisor",
-  //   titulo: "Unidad de Mando",
-  //   descripcion: "Cada empleado reporta a un solo superior, garantizando claridad en la toma de decisiones y evitando confusiones en la ejecución de las tareas.",
-  // },
-  // {
-  //   icono: "mdi:file-document-outline",
-  //   titulo: "Difusión de Responsabilidades",
-  //   descripcion: "Las funciones, obligaciones y niveles de autoridad de cada puesto son claramente definidos y comunicados por escrito para una gestión eficiente.",
-  // },
+  {
+    icono: "mdi:account-supervisor",
+    titulo: "Unidad de Mando",
+    descripcion: "Cada empleado reporta a un solo superior, garantizando claridad en la toma de decisiones y evitando confusiones en la ejecución de las tareas.",
+  },
+  {
+    icono: "mdi:file-document-outline",
+    titulo: "Difusión de Responsabilidades",
+    descripcion: "Las funciones, obligaciones y niveles de autoridad de cada puesto son claramente definidos y comunicados por escrito para una gestión eficiente.",
+  },
   // {
   //   icono: "mdi:account-group",
   //   titulo: "Eficiencia en el Control",

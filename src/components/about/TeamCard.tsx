@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export default function TeamCard({ name, image, position }: { name: string; image: string; position: string }) {
     return (
-        <div className="flex flex-col items-center text-center p-4 bg-white rounded-xl shadow-md transition-transform duration-300 hover:scale-105">
+        <div className="flex min-w-64 flex-col items-center text-center p-4 bg-white rounded-xl shadow-md transition-transform duration-300 hover:scale-105">
         <div className="w-32 h-32 rounded-full overflow-hidden mb-4">
             <Image
             src={image}

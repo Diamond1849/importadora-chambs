@@ -30,20 +30,21 @@ const HeaderChambs = ({ id = '' }: { id?: '' | 'nosotros' | 'contacto' }) => {
     <header
       className={cn(
         // MEJORA 1: Aumentar la altura del header de h-20 a h-24
-        'fixed top-0 w-full z-50 transition-all duration-300 ease-in-out border-b bg-black/95 text-white shadow-lg border-red-700',
+        'fixed top-0 w-full z-50 transition-all duration-300 ease-in-out border-b bg-[#fafbf6] shadow-lg border-red-700',
       )}
     >
       {/* MEJORA 2: Aumentar el padding vertical y cambiar la disposición de los elementos */}
       <div className="container mx-auto px-6 flex justify-between items-center h-24">
         {/* Logo - Mantener a la izquierda */}
         <div className="flex-shrink-0">
-          <div className="w-48 relative h-14">
+          <div className="w-48 relative h-14 -mt-[50px]">
             <Image
-              src="/chambs-logo.png"
+              src="/images/logo-header.jpg"
               alt="Chambs Logo"
-              fill
               className="object-contain"
               priority
+              width={100}
+              height={100}
             />
           </div>
         </div>
@@ -56,7 +57,7 @@ const HeaderChambs = ({ id = '' }: { id?: '' | 'nosotros' | 'contacto' }) => {
               data-scroll-to={link.id}
               className={cn(
                 'px-4 py-2 rounded-md font-medium transition-all duration-200 cursor-pointer relative group',
-                activeLink === link.id ? 'text-red-500' : 'text-white hover:text-red-400',
+                activeLink === link.id ? 'text-red-500' : 'text-black hover:text-red-400',
               )}
               onClick={() => handleLinkClick(link.id)}
             >

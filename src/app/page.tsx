@@ -4,10 +4,10 @@ import DetailCard from '@src/components/DetailCard';
 import { jsonCaracteristics } from '@src/utils/jsonCaracteristics';
 export default function Home() {
   return (
-    <div className="space-y-5">
+    <div>
       <Hero />
       <CarouselChambs />
-      <div className="flex flex-wrap gap-4 justify-around">
+      <div className="flex flex-wrap gap-4 justify-around mt-10">
         {jsonCaracteristics.map((item) => (
           <DetailCard
             key={item.icono}

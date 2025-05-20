@@ -1,10 +1,11 @@
 import { Icon } from '@iconify/react/dist/iconify.js';
+import Link from 'next/link';
 
 const FooterChambs = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#212121] text-white">
+    <footer className="bg-[#212121] text-white mt-10">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
@@ -15,14 +16,11 @@ const FooterChambs = () => {
               misión es ofrecer las mejores piezas para todas las marcas de vehículos.
             </p>
             <div className="flex space-x-4">
-              <a href="https://www.facebook.com/share/16g72jiz2M/?mibextid=wwXIfr" className="text-white hover:text-red-500 transition-colors duration-200">
+              <a href="https://www.facebook.com/share/16g72jiz2M/?mibextid=wwXIfr" target='_blank' className="text-white hover:text-red-500 transition-colors duration-200">
                 <Icon icon={'lucide:facebook'} />
               </a>
-              <a href="https://www.facebook.com/share/16g72jiz2M/?mibextid=wwXIfr" className="text-white hover:text-red-500 transition-colors duration-200">
+              <a href="https://www.instagram.com/importadorachambs?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target='_blank' className="text-white hover:text-red-500 transition-colors duration-200">
                 <Icon icon={'lucide:instagram'} />
-              </a>
-              <a href="https://www.facebook.com/share/16g72jiz2M/?mibextid=wwXIfr" className="text-white hover:text-red-500 transition-colors duration-200">
-                <Icon icon={'lucide:twitter'} />
               </a>
             </div>
           </div>
@@ -37,22 +35,6 @@ const FooterChambs = () => {
                   className="text-gray-300 hover:text-red-500 transition-colors duration-200"
                 >
                   Inicio
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/Marcas"
-                  className="text-gray-300 hover:text-red-500 transition-colors duration-200"
-                >
-                  Marcas
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/Servicios"
-                  className="text-gray-300 hover:text-red-500 transition-colors duration-200"
-                >
-                  Servicios
                 </Link>
               </li>
               <li>
@@ -78,13 +60,13 @@ const FooterChambs = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Contáctenos</h3>
             <ul className="space-y-3">
-              <li className="flex items-start space-x-3">
-                <Icon icon={'lucide:map-pin'} />
-                <span className="text-gray-300">Av. Principal #123, Ciudad Principal</span>
+              <li className="flex items-center space-x-3">
+                <Icon icon={'lucide:map-pin'} width={25} height={25} />
+                <span className="text-gray-300">Huachi Chico, José Villamil S/N y Av. Los Atis, Ambato, Ecuador</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Icon icon={'lucide:phone'} />
-                <span className="text-gray-300">+593 987 654 321</span>
+                <span className="text-gray-300">+593 99 380 3064</span>
               </li>
               <li className="flex items-center space-x-3">
                 <Icon icon={'lucide:mail'} />

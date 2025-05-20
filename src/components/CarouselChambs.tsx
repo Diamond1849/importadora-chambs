@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useEffect, useCallback } from "react";
 
 
@@ -78,7 +79,7 @@ const CarouselChambs = () => {
   }, [itemsToShow, currentIndex]);
 
   return (
-    <div className="relative w-full overflow-hidden py-8 md:py-12 bg-gray-100">
+    <div className="relative w-full overflow-hidden py-8 md:py-12">
       <div >
         <h2 className="text-xl md:text-2xl font-bold text-center mb-6 md:mb-8 text-gray-800">Nuestras Marcas</h2>
         
@@ -96,10 +97,12 @@ const CarouselChambs = () => {
                   style={{ width: `${100 / itemsToShow}%` }}
                 >
                   <div className="bg-white rounded-lg p-3 md:p-6 h-20 sm:h-24 md:h-32 flex items-center justify-center">
-                    <img 
+                    <Image 
                       src={brand.logo} 
                       alt={`${brand.name} logo`}
                       className="max-h-full max-w-full object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
+                      width={200}
+                      height={100}
                     />
                   </div>
                 </div>
